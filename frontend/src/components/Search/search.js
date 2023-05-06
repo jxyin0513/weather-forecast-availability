@@ -2,6 +2,7 @@ import React, { useState, useEffect,  } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { getAllCityThunk } from '../../store/locations';
+import { getCityThunk } from '../../store/location';
 import './search.css';
 
 const Search = () => {
@@ -11,10 +12,13 @@ const Search = () => {
     const [cityResult, setCityResult] = useState([])
     const user = useSelector(state=>state.session.user)
     const cities = Object.values(useSelector(state=>state.cities))
+    const location = Object.values(useSelector(state=>state.location))[0]
+    const [cityId, setCityId] = useState(location.id)
 
     useEffect(() => {
         dispatch(getAllCityThunk());
-      }, [dispatch]);
+        dispatch(getCityThunk(cityId))
+      }, [dispatch, cityId]);
 
     const searchFilter = (e)=>{
         setSearch(e.target.value);
@@ -30,6 +34,11 @@ const Search = () => {
         }
         setCityResult(searchCity)
     }
+    const changeCity = (e)=>{
+        e.preventDefault();
+        setCityId(e.target.id)
+        history.push('/')
+    }
 
     return (
     <div className='search-Bar-Outer'>
@@ -39,16 +48,16 @@ const Search = () => {
               className='search-bar'
               type='search'
               size={48}
-              placeholder="Search City or Zip Code"
+              placeholder="Search City"
               onChange={
                 searchFilter
                 }></input>
         </form>
-        {search&&(
+        {search&&cityResult.length>0&&(
             <div className='search-Results'>
                 {cityResult.map(city=>(
                     <div className='city-Outer-Container' key={city.id}>
-                        <div className='results-city-Name'>{city.name}</div>
+                        <div className='results-city-Name' id={city.id} onClick={changeCity}>{city.name}</div>
                     </div>
                 ))}
             </div>
