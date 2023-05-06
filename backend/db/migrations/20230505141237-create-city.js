@@ -15,11 +15,11 @@ module.exports = {
       countryId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        reference: {model:'Countries'}
+        references: {model:'Countries'}
       },
       userId: {
         type: Sequelize.INTEGER,
-        reference: {model:'Users'}
+        references: {model:'Users'}
       },
       zipcode: {
         type: Sequelize.INTEGER

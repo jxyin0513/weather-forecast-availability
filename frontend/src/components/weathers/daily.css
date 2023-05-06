@@ -1,0 +1,44 @@
+.daily-Weather-Outer{
+    margin: 50px 0 0 180px;
+}
+.daily-Weather-Container{
+    display: flex;
+}
+.daily-Weather-Header{
+    display: inline-block;
+    font-size: 27px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.daily-City{
+    display: inline-block;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.daily-Current-Time{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0 50px 0;
+}
+.daily-Time{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 0 20px 0px;
+    width: 100px;
+}
+.daily-Temperature{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    width: 150px;
+    margin: 0 0px 20px 0px;
+}
+.daily-Status{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    width: 230px;
+    margin: 0 0px 20px 0px;
+}
+.daily-Humidity{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 130px;
+    margin: 0 0 20px 0px;
+}

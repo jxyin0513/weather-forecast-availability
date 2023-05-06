@@ -1,9 +1,19 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import session from './session'
+import weathersReducer from './weather';
+import dailyWeathersReducer from './dweather';
+import citiesReducer from './locations';
+import countriesReducer from './country';
+import locationReducer from './location';
 
 const rootReducer = combineReducers({
-  session
+  session,
+  weathers: weathersReducer,
+  dWeathers: dailyWeathersReducer,
+  cities: citiesReducer,
+  countries: countriesReducer,
+  location: locationReducer
 });
 
 let enhancer;
