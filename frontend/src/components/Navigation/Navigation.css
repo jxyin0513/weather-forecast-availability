@@ -1,3 +1,36 @@
 .profile-dropdown {
   position: absolute;
 }
+.navBar-Outer{
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 70px;
+  width: 100%;
+  background-color:rgba(112, 142, 172, 0.855);
+  /* z-index: 3;
+  top: 0;
+  left: 0; */
+}
+.country-Container{
+  display: inline-block;
+  padding: 0 10px;
+}
+.country-Container > i{
+  padding: 5px;
+}
+.temp-Flag{
+  display: inline-block;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 20px 0 10px;
+}
+.home-Logo{
+  text-decoration: none;
+  font-size: 23px;
+  color: azure;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+  padding: 0 20px;
+}

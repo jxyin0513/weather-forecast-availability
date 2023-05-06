@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const sessionRouter = require("./session.js");
 const usersRouter = require("./users.js");
+const weatherRouter = require('./weathers.js')
+const locationRouter = require("./locations.js")
 
 // // GET /api/set-token-cookie
 // const asyncHandler = require('express-async-handler');
@@ -41,7 +43,8 @@ router.post("/test", function (req, res) {
 });
 
 router.use("/session", sessionRouter);
-
 router.use("/users", usersRouter);
+router.use("/weathers", weatherRouter);
+router.use("/locations", locationRouter)
 
 module.exports = router;

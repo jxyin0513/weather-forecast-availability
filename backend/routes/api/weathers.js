@@ -7,12 +7,22 @@ const { HourlyWeather, DailyWeather } = require("../../db/models");
 
 router.get('/hourly/:cityId', asyncHandler(async (req, res)=>{
     const id = parseInt(req.params.cityId, 10);
-    const weathers = await HourlyWeather.findByPk(id)
+    const weathers = await HourlyWeather.findAll({
+        where:{
+            cityId: id
+        }
+    })
     return res.json(weathers)
 }))
 
 router.get('/daily/:cityId', asyncHandler(async (req, res)=>{
     const id = parseInt(req.params.cityId, 10);
-    const weathers = await DailyWeather.findByPk(id)
+    const weathers = await DailyWeather.findAll({
+        where:{
+            cityId: id
+        }
+    })
     return res.json(weathers)
 }))
+
+module.exports = router;

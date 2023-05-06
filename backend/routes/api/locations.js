@@ -24,5 +24,8 @@ router.get('/countries/all', asyncHandler(async (req, res)=>{
 router.get('/countries/:countryId', asyncHandler(async (req, res)=>{
     const id = parseInt(req.params.countryId, 10);
     const country = await Country.findByPk(id)
+    console.log(country)
     return res.json(country)
 }))
+
+module.exports = router;

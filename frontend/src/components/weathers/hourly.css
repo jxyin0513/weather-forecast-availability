@@ -1,0 +1,51 @@
+.hourly-Weather-Outer{
+    margin: 50px 0 0 130px;
+}
+.hourly-Weather-Container{
+    display: flex;
+}
+.hourly-Weather-Header{
+    display: inline-block;
+    font-size: 27px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.hourly-City{
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.hourly-Current-Time{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0 10px 0;
+}
+.hourly-Date{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 0 15px 0;
+}
+.hourly-weathers{
+    padding: 15px 0 0 0;
+}
+.hourly-time{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 0 20px 0px;
+    width: 125px;
+}
+.hourly-temperature{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    width: 200px;
+    margin: 0 0px 20px 0px;
+}
+.hourly-status{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    width: 150px;
+    margin: 0 0px 20px 0px;
+}
+.hourly-humidity{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 130px;
+    margin: 0 0 20px 0px;
+}
